@@ -25,15 +25,12 @@ html {
     position: relative;
 }
 
-/* .logo
+#logo
 {
     width: 140px;
-      position: absolute;
-      top: 4%;
-      left:10% ;
 
-} */
-.navbar {
+}
+.Navbar {
     width: calc(98vw - 2rem);
     left: 50%;
     transform: translateX(-50%);
@@ -56,6 +53,7 @@ a {
 }
 
 .nav {
+    background-color: white;
     margin: .5rem;
 }
 
@@ -69,13 +67,19 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
+    
+    position: absolute;
+    top: 4%;
+    left:1% ;
 }
 
 ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* margin-left: 20px; */
 }
 
 .nav-btn {
@@ -226,37 +230,45 @@ ul {
 
 }
 
-/* .sideNav
+#sideNav
 {
 
     width: 250px;
     height: 100vh;
     position: fixed;
-    right:-250px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* right:-250px; */
+    right: 0;
     top: 0;
     background:auto;
-    z-index: 2;
-    transition: 0.5s;
-    color: white;
+    z-index: 3;
+    /* transition: 0.5s;
+    color: white; */
 
 }
 /* foe <li> item */
-/* .nav-btn{
+.nav-btn{
     list-style: none;
-    margin-block-end: 50px 20px;
+    margin-block-end: 60px 30px;
+    margin: 0px 55px;
 
-} */
+}
 /* for <a> item inside <li> item */
-/* .nav-link{
+.nav-link{
     text-decoration: none;
     font-family: 'Kaushan Script', cursive;
     color:red;
-} */
-/* #Menubtn
+}
+#Menubtn
 {
     width: 50px ;
     height: 50px;
-    background: black;
+    position:sticky;
+    background:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position:fixed;
     right: 30px;
@@ -269,7 +281,7 @@ ul {
 #Menubtn img{
     width: 20px;
     margin: top 20px ;
-}  */
+} 
 @media screen and (max-width:770px) {
 
 
