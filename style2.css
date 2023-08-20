@@ -28,6 +28,7 @@ html {
 #logo
 {
     width: 140px;
+    border: 1px solid rgba(255, 0, 0, 0.491);
 
 }
 .Navbar {
@@ -84,7 +85,9 @@ ul {
 
 .nav-btn {
     margin: 0 1rem;
-    padding: 1rem;
+    padding: 10px;
+    height: 30px;
+    width: 120px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -115,9 +118,15 @@ ul {
     .sign-btn {
         display: none;
     }
+    .banner-text{
+        padding-top: 80px;
+    }
 
     #logo {
-        display: none;
+        display: inline;
+
+
+
     }
 }
 
@@ -125,7 +134,7 @@ ul {
 .banner-text {
     text-align: center;
     color: #fff;
-    /* padding-top: 180px; */
+    /* padding-top: 40px; */
 
 }
 
@@ -236,22 +245,20 @@ ul {
     width: 250px;
     height: 100vh;
     position: fixed;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* right:-250px; */
     right: 0;
     top: 0;
     background:auto;
     z-index: 3;
-    /* transition: 0.5s;
-    color: white; */
 
+}
+#sideNav:hover{
+    cursor: pointer;
 }
 /* foe <li> item */
 .nav-btn{
     list-style: none;
     margin-block-end: 60px 30px;
-    margin: 0px 55px;
+    /* margin: 0px 55px; */
 
 }
 /* for <a> item inside <li> item */
@@ -265,7 +272,11 @@ ul {
     width: 50px ;
     height: 50px;
     position:sticky;
-    background:black;
+    /* background:black; */
+    /* background-color: pink; */
+    background: transparent;
+    /* filter: invert(100%); */
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,8 +299,12 @@ ul {
     banner-text h1 {
         font-size: 12px;
 
-        /* font-family: 'Kaushan Script', cursive; */
+        /* font-family: 'Kaushan Script',
+         cursive; */
     }
+/* .banner-text {
+padding-top: 20px;
+} */
 
     .banner-btn a {
         display: block;

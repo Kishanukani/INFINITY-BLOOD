@@ -67,21 +67,21 @@
         </div>
     </section>
     <div id="sideNav">
-        <nav>
+        <nav id="nav">
             <ul>
-                <li class="nav-btn">
+                <li class="nav-btn" id="nav2">
                     <a href="#banner" class="nav-link"> home</a>
                 </li>
-                <li class="nav-btn">
+                <li class="nav-btn" id="nav2">
                     <a href="#features" class="nav-link">features</a>
                 </li>
-                <li class="nav-btn">
+                <li class="nav-btn" id="nav2">
                     <a href="#service" class="nav-link">services</a>
                 </li>
-                <li class="nav-btn">
+                <li class="nav-btn" id="nav2">
                     <a href="#userReviews" class="nav-link">User Reviews</a>
                 </li>
-                <li class="nav-btn">
+                <li class="nav-btn" id="nav2">
                     <a href="#contactus" class="nav-link">Contact us</a>
                 </li>
             </ul>
@@ -304,10 +304,14 @@
 
 
     <script>
-        var Menubtn = document.getElementById("Menubtn")
+        let Menubtn = document.getElementById("Menubtn")
+        // const menuImage = MenuBtn.querySelector('img');
+        // let Menu = document.getElementById('menu')
         var sideNav = document.getElementById("sideNav")
         var menu = document.getElementById("menu")
-        // sideNav.style.right = "-250px"
+        // var nav = document.getElementById("nav2")
+        const navLinks = sideNav.querySelectorAll('.nav-btn');
+        sideNav.style.right = "-250px"
 
         Menubtn.onclick = function () {
             if (sideNav.style.right == "-250px") {
@@ -317,11 +321,44 @@
             }
             else {
                 sideNav.style.right = "-250px";
-                // menu.src = "close.png";
                 menu.src = "/INFINITY-BLOOD/images/Infinity Blood_files/menu.png";
             }
 
         }
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Close the sideNav by setting its right position to "-250px"
+                sideNav.style.right = '-250px';
+                menu.src = "/INFINITY-BLOOD/images/Infinity Blood_files/menu.png";
+            });
+        });
+        // var nubtn = document.getElementById(Menubtn)
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                // Menubtn.style.backgroundColor = 'blue';
+                menu.style.filter = 'invert(100%)';
+            }
+            else if (window.scrollY < 500) {
+                // Menubtn.style.backgroundColor = 'transparent';
+                menu.style.filter = 'none';
+
+            }
+        })
+        // window.addEventListener('scroll', () => {
+        //     if (window.scrollY > 500) {
+        //         Menubtn.style.filter() = 'invert(100%)';
+        //     }
+        //     else if (window.scrollY < 500) {
+        //         Menubtn.style.backgroundColor = 'black';
+
+        //     }
+        // })
+        // var menu = document.getElementById("")
+        // nav.onclick = function () {
+        //     if (sideNav.style.right == "0") {
+        //         sideNav.style.right == "-250px"
+        //     }
+        // }
         var scroll = new SmoothScroll('a[href*="#"]', {
             speed: 300
         });
