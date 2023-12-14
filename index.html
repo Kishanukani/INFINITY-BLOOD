@@ -90,10 +90,10 @@
 
     </div>
     <div id="Menubtn">
-        <!-- <img src="/menu.png" id="menu" alt="menuimage"> -->
+        <img src="/menu.png" id="menu" alt="menuimage">
         <!-- <img src="/INFINITY-BLOOD/images/Infinity Blood_files/menu.png" id="menu"> -->
         <!-- //*[@id="menu"] -->
-        <img src="/Infinity Blood_files/menu.png">
+        <!-- <img src="/Infinity Blood_files/menu.png"> -->
     </div>
     <!-- features -->
     <section id="features">
@@ -321,12 +321,12 @@
         Menubtn.onclick = function () {
             if (sideNav.style.right == "-250px") {
                 sideNav.style.right = "0";
-                menu.src = "close.png";
+                menu.src = "/close.png";
 
             }
             else {
                 sideNav.style.right = "-250px";
-                menu.src = "/INFINITY-BLOOD/images/Infinity Blood_files/menu.png";
+                menu.src = "/menu.png";
             }
 
         }
