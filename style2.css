@@ -278,7 +278,7 @@ ul {
     /* background:black; */
     /* background-color: pink; */
     background: transparent;
-    /* filter: invert(100%); */
+    filter: invert(0%);
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
