@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     // exit();
 }
 
-// echo "Database Connected Successfully.";
+echo "Database Connected Successfully.";
 $pincode = mysqli_real_escape_string($conn, $_REQUEST['pincode']);
 
 $bloodtype = mysqli_real_escape_string($conn, $_REQUEST['bloodtype']);

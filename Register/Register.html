@@ -8,16 +8,16 @@
 
   <!-- For google icons  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
-  <link rel="stylesheet" href="SignUp (2).css" />
+  <link rel="stylesheet" href="Register.css" />
 
-  <title>Sign Up form</title>
+  <title>Registration form</title>
 </head>
 
 <body>
   <div class="background"></div>
   <div class="container">
-    <h2>Sign Up</h2>
-    <form action="SignUp_Newuser.php" method="post">
+    <h2>Registration form</h2>
+    <form action="Register.php" method="POST">
 
       <fieldset class="form-item-container">
         <legend>Personal info</legend>
@@ -37,10 +37,8 @@
         </div>
 
         <div class="form-item">
-          <span class="material-icons-outlined">
-            date_range
-          </span>
-          <input type="number" name="age" id="age" placeholder="Age" required />
+          <span class="material-icons-outlined"> date_range </span>
+          <input type="number" name="age" id="age" placeholder="Age" />
         </div>
 
         <div class="form-item">
@@ -58,20 +56,6 @@
           </select>
         </div>
 
-        <div class="form-item">
-          <span class="material-icons-outlined">
-            date_range
-          </span>
-          <input type="number" name="weight" id="weight" placeholder="Weight" required />
-        </div>
-
-        <div class="form-item">
-          <span class="material-icons-outlined">
-            date_range
-          </span>
-          <input type="number" name="height" id="height" placeholder="height" required />
-        </div>
-
       </fieldset>
 
       <fieldset class="form-item-container">
@@ -79,14 +63,13 @@
 
         <div class="form-item">
           <span class="material-icons-outlined"> home </span>
-          <input type="textarea" name="address" id="address" placeholder="Enter your Address" required />
+          <input type="text" name="address" id="address" placeholder="Enter your nearest Landmark" required />
         </div>
 
         <div class="form-item">
           <span class="material-icons-outlined"> home </span>
           <input type="number" name="pincode" id="pincode" placeholder="Enter your Pincode" required />
         </div>
-
       </fieldset>
 
       <fieldset class="form-item-container">
@@ -94,44 +77,49 @@
 
         <div class="form-item">
           <span class="material-icons-outlined"> email </span>
-          <input type="text" name="email" id="email" placeholder="Enter your Email" required />
+          <input type="email" name="email" id="email" placeholder="Enter your Email" required />
         </div>
 
         <div class="form-item">
-          <span class="material-icons-outlined"> email </span>
-          <input type="number" name="mobile" id="mobile" placeholder="Enter your mobile no." required />
+          <span class="material-icons-outlined"> phone </span>
+          <input type="tel" name="mobile" id="mobile" placeholder="Enter your mobile no." required maxlength="11" />
+        </div>
       </fieldset>
-
-      <fieldset class="form-item-container">
-        <legend>Username</legend>
-
-        <div class="form-item">
-          <span class="material-icons-outlined"> account_circle </span>
-          <input type="text" name="username" id="username" placeholder="Create unique Username" required />
-        </div>
-
-        <div class="form-item">
-          <span class="material-icons-outlined"> lock </span>
-          <input type="text" name="password" id="password" placeholder="Create a strong password" required />
-        </div>
-
-
-
-      </fieldset>
-      <a href="login.html">Already a User? Login</a>
-
-
-
-      <button type="submit" onsubmit="tanish()">CONTINUE</button>
-
-      <!-- <p>New User? <a href="#">Create an account</a></p> -->
+      <div>
+        <input type="checkbox" id="eligible" name="eligible" required />
+        <label for="eligible">I do not have any diseases and can donate blood</label>
+      </div>
+      <button type="submit">CONTINUE</button>
+      <a href="/INFINITY-BLOOD/index.html">Home</a>
     </form>
-    <a href="index2.html">Home</a>
   </div>
   <script>
-    function tanish() { console.log("hii") }
-  </script>
+    // window.onload = function () {
+    //   alert('WE RECOMMEND YOU TO REGISTER ONLY IF YOU DONT HAVE ANY DISEASE.. AND iF YOUR AGE IS BETWEEN 18-50');
+    // };
+    document.getElementById('age').addEventListener('input', function (e) {
+      const min = 18;
+      const max = 50;
+      let value = parseInt(e.target.value, 10);
 
+      if (value < min) {
+        alert('please enter value between 18 and 50')
+        e.target.value = min;
+      } else if (value > max) {
+        // alert('please enter value less then 50')
+        alert('please enter value between 18 and 50')
+
+
+        e.target.value = max;
+      }
+    });
+
+    document.getElementById('eligible').addEventListener('change', function (e) {
+      if (e.target.checked) {
+        alert('Thank you for confirming you do not have any diseases and can donate blood.');
+      }
+    });
+  </script>
 </body>
 
 </html>
