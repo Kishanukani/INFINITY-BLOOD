@@ -1,11 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Your PHP code here
-  $servername = "sql12.freesqldatabase.com";
-  $username = "sql12712376";
-  $password = "NKFwQseApI";
-  $dbname = "sql12712376";
-
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "miniproject";
   session_start();
 
   // Create connection
